@@ -1,0 +1,132 @@
+/* Container for the currency converter */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Title of the currency converter */
+  h2 {
+    text-align: center;
+    color: #8e7cc3;  /* Mauve color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form styling */
+  form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form labels */
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Select and input fields */
+  .form-select, .form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-select:focus, .form-control:focus {
+    border-color: #8e7cc3;  /* Mauve color */
+    outline: none;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #8e7cc3; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #7b6bbf; 
+  }
+  .history-btn{
+    margin-left: 40%;
+  }
+  /* Converted amount display */
+  .mt-3 {
+    margin-top: 20px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Style for converted amount result */
+  .converted-amount {
+    font-size: 1.5rem;
+    color: #8e7cc3; 
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    border: 1px solid #8e7cc3;
+    display: inline-block;
+  }
+  
+  /* Error message */
+  .alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  /* Button container for improved layout */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .button-container button {
+    flex: 1;  /* Ensure buttons occupy equal space */
+    max-width: 250px;  /* Prevent buttons from becoming too wide */
+  }
+  
+  /* Responsive design for mobile devices */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    form {
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .button-container {
+      flex-direction: column;  /* Stack the buttons vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .button-container button {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

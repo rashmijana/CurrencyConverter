@@ -1,0 +1,115 @@
+/* Container for the history page */
+.history-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Table header styling */
+  th {
+    background-color: #8e7cc3;  /* Mauve color */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #8e7cc3;
+  }
+  
+  /* Table row styling (striped rows) */
+  tr:nth-child(even) {
+    background-color: #e3dfee; /* Light grey for even rows */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #fff; /* White for odd rows */
+  }
+  
+  /* Table cell styling */
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hover effect on rows */
+  tr:hover {
+    background-color: #ccc3e3;  /* Light grey background on hover */
+  }
+  
+  /* Container for the history table */
+  .table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  .btn-secondary {
+    background-color: #8e7cc3;  /* Mauve color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #7b6bbf;  /* Slightly darker mauve on hover */
+  }
+  
+  /* Pagination buttons styling */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #8e7cc3;  /* Mauve color */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
+  
+  .pagination button:hover {
+    background-color: #7b6bbf; /* Slightly darker mauve on hover */
+  }
+  
+  /* Error message styling (if any) */
+  .error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* Responsive design for mobile devices */
+  @media (max-width: 768px) {
+    .history-container {
+      padding: 10px;
+    }
+  
+    table {
+      font-size: 0.9rem;
+    }
+  
+    .pagination button {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  

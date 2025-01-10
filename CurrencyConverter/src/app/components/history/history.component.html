@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Conversion History</h2>
+    <button (click)="goBackToConverter()" class="btn btn-secondary mt-4">Back to Converter</button>
+    <!-- No history message -->
+    <div *ngIf="conversionHistory.length === 0" class="alert alert-info">
+        No conversion history available.
+    </div>
+
+    <!-- Conversion History Table -->
+    <div *ngIf="conversionHistory.length > 0">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Source Currency</th>
+                    <th>Amount</th>
+                    <th>Destination Currency</th>
+                    <th>Converted Amount</th>
+                    <th>Rate</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let history of conversionHistory">
+                    <td>{{ history.sourceCurrency }}</td>
+                    <td>{{ history.sourceAmount }}</td>
+                    <td>{{ history.destinationCurrency }}</td>
+                    <td>{{ history.destinationAmount }}</td>
+                    <td>{{ history.rate }}</td>
+                    <td>{{ history.conversionTime | date: 'short' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div class="pagination-controls">
+        <button class="btn btn-secondary" [disabled]="currentPage===1" (click)="setPage(currentPage-1)">Previous
+        </button>
+        <span class="page-number">Page{{currentPage}} of {{totalPages}}</span>
+        <button class="btn btn-secondary" [disabled]="currentPage===totalPages" (click)="setPage(currentPage+1)">Next
+        </button>
+    </div> -->
+</div>

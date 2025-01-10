@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <h2>Currency Converter</h2>
+  <form (ngSubmit)="convert(sourceCurrency,destinationCurrency,amount)">
+    <div class="mb-3">
+      <label for="sourceCurrency" class="form-label">Source Currency</label>
+      <select id="sourceCurrency" class="form-select" [(ngModel)]="sourceCurrency" name="sourceCurrency" required>
+        <option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="destinationCurrency" class="form-label">Destination Currency</label>
+      <select id="destinationCurrency" class="form-select" [(ngModel)]="destinationCurrency" name="destinationCurrency"
+        required>
+        <option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input id="amount" type="number" class="form-control" [(ngModel)]="amount" name="amount" placeholder="" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Convert</button>
+  </form>
+  <div *ngIf="convertedAmount !== null" class="mt-3 converted-amount">
+    <h3>Converted Amount: {{ convertedAmount }}</h3>
+  </div>
+  <!-- Show error message if there is an error -->
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+  <div class="history-btn">
+    <button (click)="goToHistory()" class="btn btn-secondary mt-3">Go to History</button>
+  </div>
+
+</div>
+
+<!-- <div *ngIf="showHistory">
+  <app-history></app-history>
+  <button (click)="goToHistory()" class="btn btn-secondary mt-3">Go back to Converter</button>
+</div> -->
